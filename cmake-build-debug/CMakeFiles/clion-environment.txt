@@ -1,0 +1,4 @@
+ToolSet: w64 4.0 (local)@C:\Users\Nathanael Holmes\Desktop\compiler
+Options: 
+
+Options:
