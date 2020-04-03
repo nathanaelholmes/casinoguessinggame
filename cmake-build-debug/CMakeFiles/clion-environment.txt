@@ -1,4 +1,4 @@
-ToolSet: w64 4.0 (local)@C:\Users\Nathanael Holmes\Desktop\compiler
+ToolSet: w64 6.0 (local)@C:\Qt\Tools\mingw730_64
 Options: 
 
 Options:

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\Nathanael Holmes\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = C:\Users\16038\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6911.21\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = "C:\Users\Nathanael Holmes\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = C:\Users\16038\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6911.21\bin\cmake\win\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Nathanael Holmes\CLionProjects\casinoguessinggame"
+CMAKE_SOURCE_DIR = C:\Users\16038\CLionProjects\casinoguessinggame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Nathanael Holmes\CLionProjects\casinoguessinggame\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -73,14 +73,14 @@ preinstall:
 CMakeFiles/casinoguessinggame.dir/all:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/depend
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Nathanael Holmes\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target casinoguessinggame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target casinoguessinggame"
 .PHONY : CMakeFiles/casinoguessinggame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/casinoguessinggame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Nathanael Holmes\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/casinoguessinggame.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Nathanael Holmes\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/casinoguessinggame.dir/rule
 
 # Convenience name for target.
