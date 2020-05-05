@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/16038/CLionProjects/casinoguessinggame/Gameplay functions.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+Header.h
+C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
+
+C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
+
+C:/Users/16038/CLionProjects/casinoguessinggame/main.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+Header.h
+C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
+
