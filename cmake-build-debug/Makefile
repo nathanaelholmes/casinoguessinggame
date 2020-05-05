@@ -122,6 +122,33 @@ casinoguessinggame/fast:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
 .PHONY : casinoguessinggame/fast
 
+Gameplay_functions.obj: Gameplay_functions.cpp.obj
+
+.PHONY : Gameplay_functions.obj
+
+# target to build an object file
+Gameplay_functions.cpp.obj:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.obj
+.PHONY : Gameplay_functions.cpp.obj
+
+Gameplay_functions.i: Gameplay_functions.cpp.i
+
+.PHONY : Gameplay_functions.i
+
+# target to preprocess a source file
+Gameplay_functions.cpp.i:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.i
+.PHONY : Gameplay_functions.cpp.i
+
+Gameplay_functions.s: Gameplay_functions.cpp.s
+
+.PHONY : Gameplay_functions.s
+
+# target to generate assembly for a file
+Gameplay_functions.cpp.s:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.s
+.PHONY : Gameplay_functions.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... casinoguessinggame
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Gameplay_functions.obj
+	@echo ... Gameplay_functions.i
+	@echo ... Gameplay_functions.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
