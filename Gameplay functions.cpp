@@ -15,9 +15,18 @@ void rules()
     drawLine(80,'-');
     std::cout << "\t\tRULES OF THE GAME\n";
     drawLine(80,'-');
-    std::cout << "\t1. Choose any number between 1 to 10\n";
-    std::cout << "\t2. If you win you will get 10 times of money you bet\n";
-    std::cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
+    std::cout << "\t1. Choose any number between 2 and 12.\n";
+    std::cout << "\t2. If your number matches the combined value on the dice,\n";
+    std::cout << "\tyou will win the following based on the value:\n\n";
+    std::cout << "\t\t7: X6 multiplier\n";
+    std::cout << "\t\t6 or 8: X7.2 multiplier\n";
+    std::cout << "\t\t5 or 9: X9 multiplier\n";
+    std::cout << "\t\t4 or 10: X12 multiplier\n";
+    std::cout << "\t\t3 or 11: X18 multiplier\n";
+    std::cout << "\t\t2 or 12: X36 multiplier\n\n";
+    std::cout << "\t3. If the number you guess does not match the dice,\n";
+    std::cout << "\tyou will lose your betting amount.\n\n";
+
     drawLine(80,'-');
 }
 

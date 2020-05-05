@@ -4,13 +4,18 @@
 #include <ctime>
 #include "Header.h"
 
+/*TODO: Probability mechanics. Make it so that 7 is the most likely roll and 2 and 12 are the least likely.
+ * You can do this by randomly generating each die's number separately
+ * and adding them together to create the amount on the dice.*/
 
 
 int main()
 {
     std::string playerName;
-    int amount; // hold player's balance amount
-    int bettingAmount;
+    //TODO: See if there are errors switching amount and betting amount to doubles
+    //TODO: Only dollar amounts with two decimals are valid. Round up otherwise. Display as $DD.CC
+    double amount; // hold player's balance amount
+    double bettingAmount;
     int guess;
     int dice; // hold computer generated number
     char choice;
@@ -18,13 +23,13 @@ int main()
     srand(time(0)); // "Seed" the random generator
 
     drawLine(60,'_');
-    std::cout << "\n\n\n\t\tCASINO GAME\n\n\n\n";
+    std::cout << "\n\n\n\t\tCASINO DICE GUESSING GAME\n\n\n\n";
     drawLine(60,'_');
 
     std::cout << "\n\nEnter Your Name : ";
     getline(std::cin, playerName);
 
-    std::cout << "\n\nEnter Deposit amount to play game : $";
+    std::cout << "\n\nEnter starting amount in the bank : $";
     std::cin >> amount;
 
     do
@@ -46,19 +51,61 @@ int main()
 		// Get player's numbers
         do
         {
-            std::cout << "Guess your number to bet between 1 to 10 :";
+            std::cout << "Guess your number to bet between 2 and 12 :";
             std::cin >> guess;
-            if(guess <= 0 || guess > 10)
-                std::cout << "Please check the number!! should be between 1 to 10\n"
+            if(guess <= 1 || guess > 12)
+                std::cout << "Try again. The number must be between 2 and 12\n"
                     <<"\nRe-enter data\n ";
-        }while(guess <= 0 || guess > 10);
+        }while(guess <= 1 || guess > 12);
 
-        dice = rand()%10 + 1; // Will hold the randomly generated integer between 1 and 10
+        dice = rand()%11 + 2; // Will hold the randomly generated integer between 2 and 12
 
         if(dice == guess)
         {
-            std::cout << "\n\nGood Luck!! You won Rs." << bettingAmount * 10;
-            amount = amount + bettingAmount * 10;
+            double multiplier = 0;
+
+            switch (guess) {
+                case 7:
+                    multiplier = 6;
+                    break;
+                case 6:
+                    multiplier = 7.2;
+                    break;
+                case 8:
+                    multiplier = 7.2;
+                    break;
+                case 5:
+                    multiplier = 9;
+                    break;
+                case 9:
+                    multiplier = 9;
+                    break;
+                case 4:
+                    multiplier = 12;
+                    break;
+                case 10:
+                    multiplier = 12;
+                    break;
+                case 3:
+                    multiplier = 18;
+                    break;
+                case 11:
+                    multiplier = 18;
+                    break;
+                case 2:
+                    multiplier = 36;
+                    break;
+                case 12:
+                    multiplier = 36;
+                    break;
+                default:
+                    std::cout <<"Error in program.";
+                    break;
+                    //TODO: Insert "throw" error statement into default if number is not 2-12.
+            }
+
+            std::cout << "\n\nGood Luck!! You won $" << bettingAmount * multiplier;
+            amount = amount + bettingAmount * multiplier;
         }
         else
         {
