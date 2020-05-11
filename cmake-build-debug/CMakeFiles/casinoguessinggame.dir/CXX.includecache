@@ -17,6 +17,8 @@ cstdlib
 -
 ctime
 -
+iomanip
+-
 Header.h
 C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
 

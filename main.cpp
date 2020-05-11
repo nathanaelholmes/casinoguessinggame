@@ -2,6 +2,7 @@
 #include <string> // Needed to use strings
 #include <cstdlib> // Needed to use random numbers
 #include <ctime>
+#include <iomanip>
 #include "Header.h"
 
 /*TODO: Probability mechanics. Make it so that 7 is the most likely roll and 2 and 12 are the least likely.
@@ -12,8 +13,6 @@
 int main()
 {
     std::string playerName;
-    //TODO: See if there are errors switching amount and betting amount to doubles
-    //TODO: Only dollar amounts with two decimals are valid. Round up otherwise. Display as $DD.CC
     double amount; // hold player's balance amount
     double bettingAmount;
     int guess;
@@ -31,32 +30,46 @@ int main()
 
     std::cout << "\n\nEnter starting amount in the bank : $";
     std::cin >> amount;
+    //TODO: Throw error if user enters a character
+    while (amount<=0) {
+        std::cout << "Try again. The bank amount must be greater than 0.";
+        std::cout << "\n\nEnter starting amount in the bank : $";
+        std::cin >>amount;
+    }
 
     do
     {
         system("cls");
         rules();
-        std::cout << "\n\nYour current balance is $ " << amount << "\n";
+        std::cout << "\n\nYour current balance is $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n";
 
 		// Get player's betting amount
         do
         {
             std::cout <<playerName<<", enter money to bet : $";
             std::cin >> bettingAmount;
+            //TODO: Throw error if user enters a character
+            while (bettingAmount<=0) {
+                std::cout << "Try again. The bet must be greater than 0.\n\n";
+                std::cout <<playerName<<", enter money to bet : $";
+                std::cin >> bettingAmount;
+            }
             if(bettingAmount > amount)
                 std::cout << "Your betting amount is more than your current balance\n"
                        <<"\nRe-enter data\n ";
         }while(bettingAmount > amount);
 
 		// Get player's numbers
-        do
-        {
+
+        std::cout << "Guess your number to bet between 2 and 12 :";
+        std::cin >> guess;
+        while (guess<=1 || guess >12) {
+            std::cout << "Try again. The number must be between 2 and 12.\n";
             std::cout << "Guess your number to bet between 2 and 12 :";
             std::cin >> guess;
-            if(guess <= 1 || guess > 12)
-                std::cout << "Try again. The number must be between 2 and 12\n"
-                    <<"\nRe-enter data\n ";
-        }while(guess <= 1 || guess > 12);
+        }
+        //TODO:Throw Error if entry is not an integer
+
 
         dice = rand()%11 + 2; // Will hold the randomly generated integer between 2 and 12
 
@@ -104,17 +117,17 @@ int main()
                     //TODO: Insert "throw" error statement into default if number is not 2-12.
             }
 
-            std::cout << "\n\nGood Luck!! You won $" << bettingAmount * multiplier;
+            std::cout << "\n\nGood Luck!! You won $" << std::fixed << std::setprecision(2) << std::setfill('0') <<bettingAmount * multiplier;
             amount = amount + bettingAmount * multiplier;
         }
         else
         {
-            std::cout << "Bad Luck this time !! You lost $ "<< bettingAmount <<"\n";
+            std::cout << "Bad Luck this time !! You lost $ "<< std::fixed << std::setprecision(2) << std::setfill('0') << bettingAmount <<"\n";
             amount = amount - bettingAmount;
         }
 
         std::cout << "\nThe winning number was : " << dice <<"\n";
-        std::cout << "\n"<<playerName<<", You have $ " << amount << "\n";
+        std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n";
         if(amount == 0)
         {
             std::cout << "You have no money to play ";
@@ -126,7 +139,7 @@ int main()
 
     std::cout << "\n\n\n";
     drawLine(70,'=');
-    std::cout << "\n\nThanks for playing game. Your balance amount is $ " << amount << "\n\n";
+    std::cout << "\n\nThanks for playing game. Your balance amount is $ " << std::fixed << std::setprecision(2) << std::setfill('0') <<amount << "\n\n";
     drawLine(70,'=');
 
     return 0;
