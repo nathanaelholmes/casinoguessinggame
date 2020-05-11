@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/16038/CLionProjects/casinoguessinggame/Die.cpp">
+			<Option target="casinoguessinggame"/>
+		</Unit>
+		<Unit filename="C:/Users/16038/CLionProjects/casinoguessinggame/Die.h">
+			<Option target="casinoguessinggame"/>
+		</Unit>
 		<Unit filename="C:/Users/16038/CLionProjects/casinoguessinggame/Gameplay functions.cpp">
 			<Option target="casinoguessinggame"/>
 		</Unit>

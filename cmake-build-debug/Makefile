@@ -122,6 +122,33 @@ casinoguessinggame/fast:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
 .PHONY : casinoguessinggame/fast
 
+Die.obj: Die.cpp.obj
+
+.PHONY : Die.obj
+
+# target to build an object file
+Die.cpp.obj:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.obj
+.PHONY : Die.cpp.obj
+
+Die.i: Die.cpp.i
+
+.PHONY : Die.i
+
+# target to preprocess a source file
+Die.cpp.i:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.i
+.PHONY : Die.cpp.i
+
+Die.s: Die.cpp.s
+
+.PHONY : Die.s
+
+# target to generate assembly for a file
+Die.cpp.s:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.s
+.PHONY : Die.cpp.s
+
 Gameplay_functions.obj: Gameplay_functions.cpp.obj
 
 .PHONY : Gameplay_functions.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... casinoguessinggame
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Die.obj
+	@echo ... Die.i
+	@echo ... Die.s
 	@echo ... Gameplay_functions.obj
 	@echo ... Gameplay_functions.i
 	@echo ... Gameplay_functions.s

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/casinoguessinggame.dir/Die.cpp.obj"
   "CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.obj"
   "CMakeFiles/casinoguessinggame.dir/main.cpp.obj"
   "casinoguessinggame.exe"

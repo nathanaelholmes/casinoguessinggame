@@ -3,4 +3,4 @@ project(casinoguessinggame)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(casinoguessinggame main.cpp Header.h "Gameplay functions.cpp")
+add_executable(casinoguessinggame main.cpp Header.h "Gameplay functions.cpp" Die.cpp Die.h)

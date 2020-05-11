@@ -4,6 +4,7 @@
 #include <ctime>
 #include <iomanip>
 #include "Header.h"
+#include "Die.h"
 
 /*TODO: Probability mechanics. Make it so that 7 is the most likely roll and 2 and 12 are the least likely.
  * You can do this by randomly generating each die's number separately
@@ -16,7 +17,7 @@ int main()
     double amount; // hold player's balance amount
     double bettingAmount;
     int guess;
-    int dice; // hold computer generated number
+    int rollValue; // hold computer generated number
     char choice;
 
     srand(time(0)); // "Seed" the random generator
@@ -70,10 +71,12 @@ int main()
         }
         //TODO:Throw Error if entry is not an integer
 
+        int rollValue = 0;
+        Die die1 (6, 1, 1, "red", false, "Plastic");
+        Die die2 (6, 1, 1, "green", false, "Plastic");
+        rollValue = die1.roll() + die2.roll();
 
-        dice = rand()%11 + 2; // Will hold the randomly generated integer between 2 and 12
-
-        if(dice == guess)
+        if(rollValue == guess)
         {
             double multiplier = 0;
 
@@ -126,7 +129,7 @@ int main()
             amount = amount - bettingAmount;
         }
 
-        std::cout << "\nThe winning number was : " << dice <<"\n";
+        std::cout << "\nThe winning number was : " << rollValue << "\n";
         std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n";
         if(amount == 0)
         {

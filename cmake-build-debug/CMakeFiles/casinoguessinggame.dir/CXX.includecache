@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/16038/CLionProjects/casinoguessinggame/Die.cpp
+Die.h
+C:/Users/16038/CLionProjects/casinoguessinggame/Die.h
+random
+-
+string
+-
+
+C:/Users/16038/CLionProjects/casinoguessinggame/Die.h
+string
+-
+
+C:/Users/16038/CLionProjects/casinoguessinggame/Gameplay functions.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+ctime
+-
+Header.h
+C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
+
 C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
 
 C:/Users/16038/CLionProjects/casinoguessinggame/main.cpp
@@ -21,4 +45,6 @@ iomanip
 -
 Header.h
 C:/Users/16038/CLionProjects/casinoguessinggame/Header.h
+Die.h
+C:/Users/16038/CLionProjects/casinoguessinggame/Die.h
 
