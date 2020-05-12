@@ -21,7 +21,7 @@ protected:
     int lowestNumOnDie;
     bool isSymbols;
 
-public: //Put setters & getters, roll
+public: //Setters and getters, roll
     Die(int startingNumberofSides, int startingIncrement,
         int startingLowestNum, std::string startingColor,bool startingIsSymbols, std::string startingMaterial );
     int roll();

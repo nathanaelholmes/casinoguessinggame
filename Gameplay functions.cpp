@@ -3,12 +3,9 @@
 //
 
 #include <iostream>
-#include <string> // Needed to use strings
-#include <cstdlib> // Needed to use random numbers
-#include <ctime>
 #include "Header.h"
 
-void rules()
+void rules() //Function to show player the rules of the game and explain multipliers
 {
     system("cls");
     std::cout << "\n\n";
@@ -30,7 +27,7 @@ void rules()
     drawLine(80,'-');
 }
 
-void drawLine(int n, char symbol)
+void drawLine(int n, char symbol) //Stylistic function to draw a line
 {
     for(int i=0; i<n; i++)
         std::cout << symbol;

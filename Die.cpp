@@ -1,7 +1,7 @@
 //
 // Created by offbeatmatt on 2/14/2020.
 //
-
+//File to create the dice class
 #include "Die.h"
 #include <random>
 #include <string>
