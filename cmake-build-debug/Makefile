@@ -110,138 +110,138 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named casinoguessinggame
+# Target rules for targets named QtStarter
 
 # Build rule for target.
-casinoguessinggame: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 casinoguessinggame
-.PHONY : casinoguessinggame
+QtStarter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 QtStarter
+.PHONY : QtStarter
 
 # fast build rule for target.
-casinoguessinggame/fast:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
-.PHONY : casinoguessinggame/fast
+QtStarter/fast:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/build
+.PHONY : QtStarter/fast
 
 #=============================================================================
-# Target rules for targets named casinoguessinggame_autogen
+# Target rules for targets named QtStarter_autogen
 
 # Build rule for target.
-casinoguessinggame_autogen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 casinoguessinggame_autogen
-.PHONY : casinoguessinggame_autogen
+QtStarter_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 QtStarter_autogen
+.PHONY : QtStarter_autogen
 
 # fast build rule for target.
-casinoguessinggame_autogen/fast:
-	$(MAKE) -f CMakeFiles\casinoguessinggame_autogen.dir\build.make CMakeFiles/casinoguessinggame_autogen.dir/build
-.PHONY : casinoguessinggame_autogen/fast
+QtStarter_autogen/fast:
+	$(MAKE) -f CMakeFiles\QtStarter_autogen.dir\build.make CMakeFiles/QtStarter_autogen.dir/build
+.PHONY : QtStarter_autogen/fast
 
-Die.obj: Die.cpp.obj
+QtStarter.obj: QtStarter.cpp.obj
 
-.PHONY : Die.obj
-
-# target to build an object file
-Die.cpp.obj:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.obj
-.PHONY : Die.cpp.obj
-
-Die.i: Die.cpp.i
-
-.PHONY : Die.i
-
-# target to preprocess a source file
-Die.cpp.i:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.i
-.PHONY : Die.cpp.i
-
-Die.s: Die.cpp.s
-
-.PHONY : Die.s
-
-# target to generate assembly for a file
-Die.cpp.s:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.s
-.PHONY : Die.cpp.s
-
-Gameplay_functions.obj: Gameplay_functions.cpp.obj
-
-.PHONY : Gameplay_functions.obj
+.PHONY : QtStarter.obj
 
 # target to build an object file
-Gameplay_functions.cpp.obj:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.obj
-.PHONY : Gameplay_functions.cpp.obj
+QtStarter.cpp.obj:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter.cpp.obj
+.PHONY : QtStarter.cpp.obj
 
-Gameplay_functions.i: Gameplay_functions.cpp.i
+QtStarter.i: QtStarter.cpp.i
 
-.PHONY : Gameplay_functions.i
+.PHONY : QtStarter.i
 
 # target to preprocess a source file
-Gameplay_functions.cpp.i:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.i
-.PHONY : Gameplay_functions.cpp.i
+QtStarter.cpp.i:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter.cpp.i
+.PHONY : QtStarter.cpp.i
 
-Gameplay_functions.s: Gameplay_functions.cpp.s
+QtStarter.s: QtStarter.cpp.s
 
-.PHONY : Gameplay_functions.s
+.PHONY : QtStarter.s
 
 # target to generate assembly for a file
-Gameplay_functions.cpp.s:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.s
-.PHONY : Gameplay_functions.cpp.s
+QtStarter.cpp.s:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter.cpp.s
+.PHONY : QtStarter.cpp.s
 
-casinoguessinggame_autogen/mocs_compilation.obj: casinoguessinggame_autogen/mocs_compilation.cpp.obj
+QtStarterGame.obj: QtStarterGame.cpp.obj
 
-.PHONY : casinoguessinggame_autogen/mocs_compilation.obj
+.PHONY : QtStarterGame.obj
 
 # target to build an object file
-casinoguessinggame_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.obj
-.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.obj
+QtStarterGame.cpp.obj:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarterGame.cpp.obj
+.PHONY : QtStarterGame.cpp.obj
 
-casinoguessinggame_autogen/mocs_compilation.i: casinoguessinggame_autogen/mocs_compilation.cpp.i
+QtStarterGame.i: QtStarterGame.cpp.i
 
-.PHONY : casinoguessinggame_autogen/mocs_compilation.i
+.PHONY : QtStarterGame.i
 
 # target to preprocess a source file
-casinoguessinggame_autogen/mocs_compilation.cpp.i:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.i
-.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.i
+QtStarterGame.cpp.i:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarterGame.cpp.i
+.PHONY : QtStarterGame.cpp.i
 
-casinoguessinggame_autogen/mocs_compilation.s: casinoguessinggame_autogen/mocs_compilation.cpp.s
+QtStarterGame.s: QtStarterGame.cpp.s
 
-.PHONY : casinoguessinggame_autogen/mocs_compilation.s
+.PHONY : QtStarterGame.s
 
 # target to generate assembly for a file
-casinoguessinggame_autogen/mocs_compilation.cpp.s:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.s
-.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.s
+QtStarterGame.cpp.s:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarterGame.cpp.s
+.PHONY : QtStarterGame.cpp.s
 
-main.obj: main.cpp.obj
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.obj: QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.obj
 
-.PHONY : main.obj
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.obj:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.obj
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.obj
 
-main.i: main.cpp.i
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.i: QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.i
 
-.PHONY : main.i
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/main.cpp.i
-.PHONY : main.cpp.i
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.i:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.i
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.i
 
-main.s: main.cpp.s
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.s: QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.s
 
-.PHONY : main.s
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/main.cpp.s
-.PHONY : main.cpp.s
+QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.s:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.s
+.PHONY : QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.cpp.s
+
+QtStarter_autogen/mocs_compilation.obj: QtStarter_autogen/mocs_compilation.cpp.obj
+
+.PHONY : QtStarter_autogen/mocs_compilation.obj
+
+# target to build an object file
+QtStarter_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/mocs_compilation.cpp.obj
+.PHONY : QtStarter_autogen/mocs_compilation.cpp.obj
+
+QtStarter_autogen/mocs_compilation.i: QtStarter_autogen/mocs_compilation.cpp.i
+
+.PHONY : QtStarter_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+QtStarter_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/mocs_compilation.cpp.i
+.PHONY : QtStarter_autogen/mocs_compilation.cpp.i
+
+QtStarter_autogen/mocs_compilation.s: QtStarter_autogen/mocs_compilation.cpp.s
+
+.PHONY : QtStarter_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+QtStarter_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/QtStarter_autogen/mocs_compilation.cpp.s
+.PHONY : QtStarter_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -249,22 +249,22 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... casinoguessinggame
+	@echo ... QtStarter
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... casinoguessinggame_autogen
-	@echo ... Die.obj
-	@echo ... Die.i
-	@echo ... Die.s
-	@echo ... Gameplay_functions.obj
-	@echo ... Gameplay_functions.i
-	@echo ... Gameplay_functions.s
-	@echo ... casinoguessinggame_autogen/mocs_compilation.obj
-	@echo ... casinoguessinggame_autogen/mocs_compilation.i
-	@echo ... casinoguessinggame_autogen/mocs_compilation.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... QtStarter_autogen
+	@echo ... QtStarter.obj
+	@echo ... QtStarter.i
+	@echo ... QtStarter.s
+	@echo ... QtStarterGame.obj
+	@echo ... QtStarterGame.i
+	@echo ... QtStarterGame.s
+	@echo ... QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.obj
+	@echo ... QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.i
+	@echo ... QtStarter_autogen/EWIEGA46WW/qrc_QtStarterResources.s
+	@echo ... QtStarter_autogen/mocs_compilation.obj
+	@echo ... QtStarter_autogen/mocs_compilation.i
+	@echo ... QtStarter_autogen/mocs_compilation.s
 .PHONY : help
 
 

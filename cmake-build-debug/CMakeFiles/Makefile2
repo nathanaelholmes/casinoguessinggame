@@ -52,7 +52,7 @@ CMAKE_BINARY_DIR = C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-d
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/casinoguessinggame.dir/all
+all: CMakeFiles/QtStarter.dir/all
 
 .PHONY : all
 
@@ -62,64 +62,64 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/casinoguessinggame.dir/clean
-clean: CMakeFiles/casinoguessinggame_autogen.dir/clean
+clean: CMakeFiles/QtStarter.dir/clean
+clean: CMakeFiles/QtStarter_autogen.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/casinoguessinggame.dir
+# Target rules for target CMakeFiles/QtStarter.dir
 
 # All Build rule for target.
-CMakeFiles/casinoguessinggame.dir/all: CMakeFiles/casinoguessinggame_autogen.dir/all
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/depend
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target casinoguessinggame"
-.PHONY : CMakeFiles/casinoguessinggame.dir/all
+CMakeFiles/QtStarter.dir/all: CMakeFiles/QtStarter_autogen.dir/all
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/depend
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target QtStarter"
+.PHONY : CMakeFiles/QtStarter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/casinoguessinggame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 6
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/casinoguessinggame.dir/all
+CMakeFiles/QtStarter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 7
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/QtStarter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/casinoguessinggame.dir/rule
+.PHONY : CMakeFiles/QtStarter.dir/rule
 
 # Convenience name for target.
-casinoguessinggame: CMakeFiles/casinoguessinggame.dir/rule
+QtStarter: CMakeFiles/QtStarter.dir/rule
 
-.PHONY : casinoguessinggame
+.PHONY : QtStarter
 
 # clean rule for target.
-CMakeFiles/casinoguessinggame.dir/clean:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/clean
-.PHONY : CMakeFiles/casinoguessinggame.dir/clean
+CMakeFiles/QtStarter.dir/clean:
+	$(MAKE) -f CMakeFiles\QtStarter.dir\build.make CMakeFiles/QtStarter.dir/clean
+.PHONY : CMakeFiles/QtStarter.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/casinoguessinggame_autogen.dir
+# Target rules for target CMakeFiles/QtStarter_autogen.dir
 
 # All Build rule for target.
-CMakeFiles/casinoguessinggame_autogen.dir/all:
-	$(MAKE) -f CMakeFiles\casinoguessinggame_autogen.dir\build.make CMakeFiles/casinoguessinggame_autogen.dir/depend
-	$(MAKE) -f CMakeFiles\casinoguessinggame_autogen.dir\build.make CMakeFiles/casinoguessinggame_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles --progress-num=6 "Built target casinoguessinggame_autogen"
-.PHONY : CMakeFiles/casinoguessinggame_autogen.dir/all
+CMakeFiles/QtStarter_autogen.dir/all:
+	$(MAKE) -f CMakeFiles\QtStarter_autogen.dir\build.make CMakeFiles/QtStarter_autogen.dir/depend
+	$(MAKE) -f CMakeFiles\QtStarter_autogen.dir\build.make CMakeFiles/QtStarter_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles --progress-num=7 "Built target QtStarter_autogen"
+.PHONY : CMakeFiles/QtStarter_autogen.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/casinoguessinggame_autogen.dir/rule: cmake_check_build_system
+CMakeFiles/QtStarter_autogen.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 1
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/casinoguessinggame_autogen.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/QtStarter_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\16038\CLionProjects\casinoguessinggame\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/casinoguessinggame_autogen.dir/rule
+.PHONY : CMakeFiles/QtStarter_autogen.dir/rule
 
 # Convenience name for target.
-casinoguessinggame_autogen: CMakeFiles/casinoguessinggame_autogen.dir/rule
+QtStarter_autogen: CMakeFiles/QtStarter_autogen.dir/rule
 
-.PHONY : casinoguessinggame_autogen
+.PHONY : QtStarter_autogen
 
 # clean rule for target.
-CMakeFiles/casinoguessinggame_autogen.dir/clean:
-	$(MAKE) -f CMakeFiles\casinoguessinggame_autogen.dir\build.make CMakeFiles/casinoguessinggame_autogen.dir/clean
-.PHONY : CMakeFiles/casinoguessinggame_autogen.dir/clean
+CMakeFiles/QtStarter_autogen.dir/clean:
+	$(MAKE) -f CMakeFiles\QtStarter_autogen.dir\build.make CMakeFiles/QtStarter_autogen.dir/clean
+.PHONY : CMakeFiles/QtStarter_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
