@@ -1,4 +1,5 @@
 C:\Users\16038\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\16038\CLionProjects\casinoguessinggame
+QT_INCLUDES: cmake-build-debug/QtStarterStarter_autogen/include/ui_QtStarterMainWindow.h
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug

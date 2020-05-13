@@ -122,6 +122,19 @@ casinoguessinggame/fast:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/build
 .PHONY : casinoguessinggame/fast
 
+#=============================================================================
+# Target rules for targets named casinoguessinggame_autogen
+
+# Build rule for target.
+casinoguessinggame_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 casinoguessinggame_autogen
+.PHONY : casinoguessinggame_autogen
+
+# fast build rule for target.
+casinoguessinggame_autogen/fast:
+	$(MAKE) -f CMakeFiles\casinoguessinggame_autogen.dir\build.make CMakeFiles/casinoguessinggame_autogen.dir/build
+.PHONY : casinoguessinggame_autogen/fast
+
 Die.obj: Die.cpp.obj
 
 .PHONY : Die.obj
@@ -176,6 +189,33 @@ Gameplay_functions.cpp.s:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.s
 .PHONY : Gameplay_functions.cpp.s
 
+casinoguessinggame_autogen/mocs_compilation.obj: casinoguessinggame_autogen/mocs_compilation.cpp.obj
+
+.PHONY : casinoguessinggame_autogen/mocs_compilation.obj
+
+# target to build an object file
+casinoguessinggame_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.obj
+.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.obj
+
+casinoguessinggame_autogen/mocs_compilation.i: casinoguessinggame_autogen/mocs_compilation.cpp.i
+
+.PHONY : casinoguessinggame_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+casinoguessinggame_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.i
+.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.i
+
+casinoguessinggame_autogen/mocs_compilation.s: casinoguessinggame_autogen/mocs_compilation.cpp.s
+
+.PHONY : casinoguessinggame_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+casinoguessinggame_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/casinoguessinggame_autogen/mocs_compilation.cpp.s
+.PHONY : casinoguessinggame_autogen/mocs_compilation.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -212,12 +252,16 @@ help:
 	@echo ... casinoguessinggame
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... casinoguessinggame_autogen
 	@echo ... Die.obj
 	@echo ... Die.i
 	@echo ... Die.s
 	@echo ... Gameplay_functions.obj
 	@echo ... Gameplay_functions.i
 	@echo ... Gameplay_functions.s
+	@echo ... casinoguessinggame_autogen/mocs_compilation.obj
+	@echo ... casinoguessinggame_autogen/mocs_compilation.i
+	@echo ... casinoguessinggame_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
