@@ -162,7 +162,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=QtStarter
+CMAKE_PROJECT_NAME:STATIC=casinoguessinggame
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Qt/Tools/mingw730_64/bin/ranlib.exe
@@ -264,6 +264,12 @@ QtStarter_BINARY_DIR:STATIC=C:/Users/16038/CLionProjects/casinoguessinggame/cmak
 
 //Value Computed by CMake
 QtStarter_SOURCE_DIR:STATIC=C:/Users/16038/CLionProjects/casinoguessinggame
+
+//Value Computed by CMake
+casinoguessinggame_BINARY_DIR:STATIC=C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug
+
+//Value Computed by CMake
+casinoguessinggame_SOURCE_DIR:STATIC=C:/Users/16038/CLionProjects/casinoguessinggame
 
 
 ########################

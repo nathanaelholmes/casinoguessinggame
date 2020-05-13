@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
-project(QtStarter)
+project(casinoguessinggame)
+
 set(CMAKE_CXX_STANDARD 17)
 
 # Tell cmake where Qt is located
@@ -28,7 +29,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
 qt5_generate_moc(QtStarterGame.cpp QtStarterGame.moc QtStarter.cpp QtStarter.moc)
 
-add_executable(${PROJECT_NAME} QtStarterGame.cpp QtStarter.cpp QtStarter.h QtStarterMainWindow.ui QtStarterResources.qrc)
+add_executable(${PROJECT_NAME} QtStarterGame.cpp QtStarter.cpp QtStarter.h QtStarterMainWindow.ui QtStarterResources.qrc Die.cpp Die.h "Gameplay functions.cpp" Header.h)
 
 #Link the QtStarter executable to the Qt 5 widgets library.
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
