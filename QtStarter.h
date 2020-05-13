@@ -8,11 +8,11 @@
 #include "ui_QtStarterMainWindow.h"
 #include <QMainWindow>
 
-class QtStarterMainWindow : public QMainWindow, private Ui::QtStarterMainWindow {
+class CasinoGuessingGameMainWindow : public QMainWindow, private Ui::QtStarterMainWindow {
 Q_OBJECT
 
 public:
-    QtStarterMainWindow(QMainWindow *parent = nullptr);
+    CasinoGuessingGameMainWindow(QMainWindow *parent = nullptr);
     void printStringRep();
     void updateUI();
 

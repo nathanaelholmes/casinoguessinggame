@@ -8,17 +8,12 @@
 #include <QtWidgets/QLabel>
 #include "QtStarter.h"
 
-#include <string> // Needed to use strings
-#include <cstdlib> // Needed to use random numbers
-#include <ctime> //Needed to seed random numbers
-#include <iomanip> //Needed to display bank amount and bet correctly
-#include "Header.h"
-#include "Die.h"
+
 
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    QtStarterMainWindow QtStarterApp;
+    CasinoGuessingGameMainWindow QtStarterApp;
 
     QtStarterApp.updateUI();
     QtStarterApp.show();
