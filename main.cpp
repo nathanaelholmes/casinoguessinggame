@@ -135,7 +135,7 @@ int main()
 
         std::cout << "\nThe winning number was : " << rollValue << "\n"; //Displays amount of dice
         std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n"; //Displays new bank amount
-        if(amount == 0) //Sequence if player has no money left
+        if(amount < .01) //Sequence if player has no money left
         {
             std::cout << "You have no money to play ";
             break;
@@ -143,6 +143,7 @@ int main()
         std::cout << "\n\n-->Do you want to play again (y/n)? "; //Asks player whether to play again
         std::cin >> choice;
     }while(choice =='Y'|| choice=='y'); //Checks that player entered y for yes
+    //TODO:Implement so only y and n are options
 
     //Closing Sequence
     std::cout << "\n\n\n";
