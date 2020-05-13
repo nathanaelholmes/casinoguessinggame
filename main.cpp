@@ -31,7 +31,7 @@ int main()
     double amount = 0; // Double variable that holds the amount in the bank
     std::cin >> amount;
     //TODO: Convert Error Handling into Try-Catch statements?
-    while (!std::cin || amount <=0) { //Error handling for non-doubles and non-positive numbers
+    while (!std::cin || amount <.01) { //Error handling for non-doubles and non-positive numbers
         std::cin.clear();
         std::cin.ignore(10000, '\n');
         std::cout << "Try again. The number must be greater than 0.\n";
