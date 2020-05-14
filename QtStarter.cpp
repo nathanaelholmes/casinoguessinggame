@@ -2,7 +2,7 @@
 #include <cstdio>
 
 #include "QtStarter.h"
-#include "ui_QtStarterMainWindow.h"
+#include "ui_CGGameMainWindow.h"
 
 #include <string> // Needed to use strings
 #include <cstdlib> // Needed to use random numbers
@@ -16,41 +16,62 @@ void displayResults(float currentBank, float currentBet);
 CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent):
 // Build a GUI  main window for two dice.
 
-        dummyVariable { true },
-        textOutput { "" }
+        playerName { "Fred" },  // Define default values
+        amount { 10000.00 },
+        textOutput { "" },
+        die1 { 6, 1, 1, "red", false, "Plastic" },
+        die2 { 6, 1, 1, "green", false, "Plastic" }
+
 {
     setupUi(this);
 
-    Die die1 (6, 1, 1, "red", false, "Plastic");
-    //Die 1 is initialized
-    Die die2 (6, 1, 1, "green", false, "Plastic");
-    //Die 2 is initialized
     //TODO: Let user pick different type of dice. Perhaps do this in QT?
 
 
     srand(time(0)); // "Seed" the random generator with computer clock
 
     //Title Screen
-    drawLine(60,'_');
-    std::cout << "\n\n\n\t\tCASINO DICE GUESSING GAME\n\n\n\n";
-    drawLine(60,'_');
-    //Character Enters name
-    std::cout << "\n\nEnter Your Name : ";
-    std::string playerName = ""; //String variable for the player's name
-    getline(std::cin, playerName);
-    //Character enters starting bank value
-    std::cout << "\n\nEnter starting amount in the bank : $";
-    double amount = 0; // Double variable that holds the amount in the bank
-    std::cin >> amount;
+//    drawLine(60,'_');
+//    std::cout << "\n\n\n\t\tCASINO DICE GUESSING GAME\n\n\n\n";
+//    drawLine(60,'_');
+//    //Character Enters name
+//    std::cout << "\n\nEnter Your Name : ";
+//    std::string playerName = ""; //String variable for the player's name
+//    getline(std::cin, playerName);
+//    //Character enters starting bank value
+//    std::cout << "\n\nEnter starting amount in the bank : $";
+//    double amount = 0; // Double variable that holds the amount in the bank
+//    std::cin >> amount;
     //TODO: Convert Error Handling into Try-Catch statements?
-    while (!std::cin || amount <.01) { //Error handling for non-doubles and non-positive numbers
-        std::cin.clear();
-        std::cin.ignore(10000, '\n');
-        std::cout << "Try again. The number must be greater than 0.\n";
-        std::cout << "\n\nEnter starting amount in the bank : $";
-        std::cin>>amount;
-    }
+//    while (!std::cin || amount <.01) { //Error handling for non-doubles and non-positive numbers
+//        std::cin.clear();
+//        std::cin.ignore(10000, '\n');
+//        std::cout << "Try again. The number must be greater than 0.\n";
+//        std::cout << "\n\nEnter starting amount in the bank : $";
+//        std::cin>>amount;
+//    }
 
+    //Closing Sequence
+    std::cout << "\n\n\n";
+    drawLine(70,'=');
+    std::cout << "\n\nThanks for playing game. Your balance amount is $ " << std::fixed << std::setprecision(2) << std::setfill('0') <<amount << "\n\n";
+    drawLine(70,'=');
+
+    QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
+}
+void CasinoGuessingGameMainWindow::printStringRep() {
+    // String representation for QtStarter.
+    return;
+}
+void CasinoGuessingGameMainWindow::updateUI() {
+//    printf("Inside updateUI()\n");
+    textOutputUI->setText(QString::fromStdString(textOutput));
+}
+
+
+// Player asked for another roll of the dice.
+void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
+    printf("Inside pushButtonClickedHandler()\n");
     char choice = 'n'; //Char variable to select whether to play the game again
     do //Loop of actual gameplay after bank is initialized
     {
@@ -157,31 +178,5 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
     }while(choice =='Y'|| choice=='y'); //Checks that player entered y for yes
     //TODO:Implement so only y and n are options
 
-    //Closing Sequence
-    std::cout << "\n\n\n";
-    drawLine(70,'=');
-    std::cout << "\n\nThanks for playing game. Your balance amount is $ " << std::fixed << std::setprecision(2) << std::setfill('0') <<amount << "\n\n";
-    drawLine(70,'=');
-
-    QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
-}
-void CasinoGuessingGameMainWindow::printStringRep() {
-    // String representation for QtStarter.
-    return;
-}
-void CasinoGuessingGameMainWindow::updateUI() {
-//    printf("Inside updateUI()\n");
-    textOutputUI->setText(QString::fromStdString(textOutput));
-}
-
-
-// Player asked for another roll of the dice.
-void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
-    printf("Inside pushButtonClickedHandler()\n");
-    if (textOutput != "Hello World!" || textOutput == "") {
-        textOutput = "Hello World!";
-    } else {
-        textOutput = "Happy to Meet You.";
-    }
     updateUI();
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/QtStarter.iml" filepath="$PROJECT_DIR$/.idea/QtStarter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/casinoguessinggame.iml" filepath="$PROJECT_DIR$/.idea/casinoguessinggame.iml" />
     </modules>
   </component>
 </project>

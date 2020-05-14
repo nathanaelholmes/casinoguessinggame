@@ -5,7 +5,8 @@
 #ifndef QTSTARTERSTARTER_QTSTARTER_H
 #define QTSTARTERSTARTER_QTSTARTER_H
 
-#include "ui_QtStarterMainWindow.h"
+#include "ui_CGGameMainWindow.h"
+#include "Die.h"
 #include <QMainWindow>
 
 class CasinoGuessingGameMainWindow : public QMainWindow, private Ui::QtStarterMainWindow {
@@ -17,8 +18,10 @@ public:
     void updateUI();
 
 private:
-    bool dummyVariable;
+    std::string playerName;
+    double amount;
     std::string textOutput;
+    Die die1, die2;
 
 public Q_SLOTS:
     void pushButtonClickedHandler();
