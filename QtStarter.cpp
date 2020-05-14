@@ -66,37 +66,28 @@ void CasinoGuessingGameMainWindow::printStringRep() {
 void CasinoGuessingGameMainWindow::updateUI() {
 //    printf("Inside updateUI()\n");
     textOutputUI->setText(QString::fromStdString(textOutput));
+    textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
 }
 
 
 // Player asked for another roll of the dice.
 void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
     printf("Inside pushButtonClickedHandler()\n");
-    char choice = 'n'; //Char variable to select whether to play the game again
-    do //Loop of actual gameplay after bank is initialized
-    {
-        system("cls"); //Clears the screen
-        rules(); //Shows player the rules
-        std::cout << "\n\nYour current balance is $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n"; //Shows bank amount in $$DD.CC format
 
         // Get player's betting amount
         double bettingAmount = 0; //Double variable that holds a bet amount less than or equal to the bank amount
-        do
-        {
-            std::cout <<playerName<<", enter money to bet : $";
-            std::cin >> bettingAmount;
-            //TODO: Convert error handling into try-catch statements?
-            while (!std::cin || bettingAmount<=0) { //Error Handling for non-doubles and non-positive numbers
-                std::cin.clear();
-                std::cin.ignore(10000, '\n');
-                std::cout << "Try again. The bet must be greater than 0.\n\n";
-                std::cout <<playerName<<", enter money to bet : $";
-                std::cin >> bettingAmount;
-            }
-            if(bettingAmount > amount) //Checks that bet is less than bank amount
-                std::cout << "Your betting amount is more than your current balance\n"
-                          <<"\nRe-enter data\n ";
-        }while(bettingAmount > amount);
+        bettingAmount = currentBetUI->value();
+        //TODO: Convert error handling into try-catch statements?
+//        while (!std::cin || bettingAmount<=0) { //Error Handling for non-doubles and non-positive numbers
+//            std::cin.clear();
+//            std::cin.ignore(10000, '\n');
+//            std::cout << "Try again. The bet must be greater than 0.\n\n";
+//            std::cout <<playerName<<", enter money to bet : $";
+//            std::cin >> bettingAmount;
+//        }
+//        if(bettingAmount > amount) //Checks that bet is less than bank amount
+//            std::cout << "Your betting amount is more than your current balance\n"
+//                      <<"\nRe-enter data\n ";
 
         // Player guesses a number between 2 and 12
         int guess = 0; //Integer to guess the number on a dice
@@ -113,8 +104,8 @@ void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
         int rollValue = 0; //The actual number on the Dice
         rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
 
-        if(rollValue == guess) //Branch if the guess is the same as the dice
-        {
+        if(rollValue == guess) { //Branch if the guess is the same as the dice
+
             double multiplier = 0;//A multiplier variable is initialized
 
             switch (guess) { //Assigns a multiplier based on how likely the number is to appear
@@ -159,23 +150,16 @@ void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
 
             std::cout << "\n\nGood Luck!! You won $" << std::fixed << std::setprecision(2) << std::setfill('0') <<bettingAmount * multiplier; //Winning message
             amount = amount + bettingAmount * multiplier; //Bank amount updated
-        }
-        else
-        {
+        } else {
             std::cout << "Bad Luck this time !! You lost $ "<< std::fixed << std::setprecision(2) << std::setfill('0') << bettingAmount <<"\n"; //Losing message
             amount = amount - bettingAmount; //Bank amount updated
         }
 
         std::cout << "\nThe winning number was : " << rollValue << "\n"; //Displays amount of dice
         std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n"; //Displays new bank amount
-        if(amount < .01) //Sequence if player has no money left
-        {
+        if(amount < .01) { //Sequence if player has no money left
             std::cout << "You have no money to play ";
-            break;
         }
-        std::cout << "\n\n-->Do you want to play again (y/n)? "; //Asks player whether to play again
-        std::cin >> choice;
-    }while(choice =='Y'|| choice=='y'); //Checks that player entered y for yes
     //TODO:Implement so only y and n are options
 
     updateUI();
