@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Tell cmake where Qt is located
 set(Qt5_DIR "/usr/local/Cellar/qt/5.14.1/lib/cmake/Qt5")
 set(QT_INCLUDES "/usr/local/Cellar/qt/5.14.1/include")
-set(QT_INCLUDES "cmake-build-debug/QtStarterStarter_autogen/include/ui_QtStarterMainWindow.h")
+set(QT_INCLUDES "cmake-build-debug/casinoguessinggame/include/ui_CGGameMainWindow.h")
 MESSAGE("QT_INCLUDES: ${QT_INCLUDES}")
 
 # Find includes in corresponding build directories
@@ -29,7 +29,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
 qt5_generate_moc(QtStarterGame.cpp QtStarterGame.moc QtStarter.cpp QtStarter.moc)
 
-add_executable(${PROJECT_NAME} QtStarterGame.cpp QtStarter.cpp QtStarter.h QtStarterMainWindow.ui QtStarterResources.qrc Die.cpp Die.h "Gameplay functions.cpp" Header.h)
+add_executable(${PROJECT_NAME} QtStarterGame.cpp QtStarter.cpp QtStarter.h CGGameMainWindow.ui QtStarterResources.qrc Die.cpp Die.h "Gameplay functions.cpp" Header.h)
 
 #Link the QtStarter executable to the Qt 5 widgets library.
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
