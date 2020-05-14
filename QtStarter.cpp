@@ -33,6 +33,8 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 
     QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
     QObject::connect(guess2ButtonUI, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
+    QObject::connect(guess3ButtonUI, SIGNAL(clicked()), this, SLOT(guess3ButtonClickedHandler()));
+    QObject::connect(guess4ButtonUI, SIGNAL(clicked()), this, SLOT(guess4ButtonClickedHandler()));
 }
 void CasinoGuessingGameMainWindow::printStringRep() {
     // String representation for QtStarter.
@@ -111,6 +113,16 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {
     printf("Pushed Button 2\n");
     guessValue = 2;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess3ButtonClickedHandler() {
+    printf("Pushed Button 3\n");
+    guessValue = 3;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess4ButtonClickedHandler() {
+    printf("Pushed Button 4\n");
+    guessValue = 4;
     playTurn(guessValue);
 }
 void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {

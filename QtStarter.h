@@ -28,6 +28,8 @@ public Q_SLOTS:
     void playTurn(int guessedValue);
     void pushButtonClickedHandler();
     void guess2ButtonClickedHandler();
+    void guess3ButtonClickedHandler();
+    void guess4ButtonClickedHandler();
 };
 
 #endif //QTSTARTERSTARTER_QTSTARTER_H
