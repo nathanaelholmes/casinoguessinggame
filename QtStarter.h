@@ -22,10 +22,12 @@ private:
     double amount;
     std::string textOutput;
     Die die1, die2;
+    int guessValue;
 
 public Q_SLOTS:
+    void playTurn(int guessedValue);
     void pushButtonClickedHandler();
-
+    void guess2ButtonClickedHandler();
 };
 
 #endif //QTSTARTERSTARTER_QTSTARTER_H

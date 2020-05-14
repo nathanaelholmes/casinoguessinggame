@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>653</width>
-    <height>490</height>
+    <height>578</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Play Your Turn!</string>
     </property>
    </widget>
    <widget class="QLabel" name="textOutputUI">
@@ -48,15 +48,108 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QSpinBox" name="currentBetUI">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>30</y>
-      <width>42</width>
-      <height>22</height>
+      <x>27</x>
+      <y>445</y>
+      <width>611</width>
+      <height>81</height>
      </rect>
     </property>
+    <property name="text">
+     <string>Da Rules go here</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>240</y>
+      <width>210</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="guess2ButtonUI">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="guess3ButtonUI">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="guess4ButtonUI">
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="guess5ButtonUI">
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="guess6ButtonUI">
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="guess7ButtonUI">
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="guess8ButtonUI">
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="guess9ButtonUI">
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>102</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Your Bet:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="currentBetUI"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

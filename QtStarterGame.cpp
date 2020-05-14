@@ -18,7 +18,5 @@ int main(int argc, char *argv[]) {
     QtStarterApp.updateUI();
     QtStarterApp.show();
 
-
     return app.exec();
 }
-
