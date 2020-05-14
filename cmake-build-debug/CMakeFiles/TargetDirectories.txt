@@ -1,4 +1,4 @@
-/Users/arana/Documents/CLionProjects/SNHU/ForGrading/casinoguessinggame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/arana/Documents/CLionProjects/SNHU/ForGrading/casinoguessinggame/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/arana/Documents/CLionProjects/SNHU/ForGrading/casinoguessinggame/cmake-build-debug/CMakeFiles/casinoguessinggame.dir
-/Users/arana/Documents/CLionProjects/SNHU/ForGrading/casinoguessinggame/cmake-build-debug/CMakeFiles/casinoguessinggame_autogen.dir
+C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug/CMakeFiles/casinoguessinggame.dir
+C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/16038/CLionProjects/casinoguessinggame/cmake-build-debug/CMakeFiles/casinoguessinggame_autogen.dir
