@@ -17,7 +17,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 // Build a GUI  main window for two dice.
 
         playerName { "Fred" },  // Define default values
-        amount { 50000.00 },
+        amount { 5000.00 },
         bettingAmount {0},
         textOutput { "" },
         die1Output{""},
