@@ -30,6 +30,14 @@ public Q_SLOTS:
     void guess2ButtonClickedHandler();
     void guess3ButtonClickedHandler();
     void guess4ButtonClickedHandler();
+    void guess5ButtonClickedHandler();
+    void guess6ButtonClickedHandler();
+    void guess7ButtonClickedHandler();
+    void guess8ButtonClickedHandler();
+    void guess9ButtonClickedHandler();
+    void guess10ButtonClickedHandler();
+    void guess11ButtonClickedHandler();
+    void guess12ButtonClickedHandler();
 };
 
 #endif //QTSTARTERSTARTER_QTSTARTER_H

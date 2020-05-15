@@ -23,6 +23,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
         die1 { 6, 1, 1, "red", false, "Plastic" },
         die2 { 6, 1, 1, "green", false, "Plastic" }
 
+
 {
     setupUi(this);
 
@@ -32,9 +33,17 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
     srand(time(0)); // "Seed" the random generator with computer clock
 
     QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
-    QObject::connect(guess2ButtonUI, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
-    QObject::connect(guess3ButtonUI, SIGNAL(clicked()), this, SLOT(guess3ButtonClickedHandler()));
-    QObject::connect(guess4ButtonUI, SIGNAL(clicked()), this, SLOT(guess4ButtonClickedHandler()));
+    QObject::connect(guess2Button, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
+    QObject::connect(guess3Button, SIGNAL(clicked()), this, SLOT(guess3ButtonClickedHandler()));
+    QObject::connect(guess4Button, SIGNAL(clicked()), this, SLOT(guess4ButtonClickedHandler()));
+    QObject::connect(guess5Button, SIGNAL(clicked()), this, SLOT(guess5ButtonClickedHandler()));
+    QObject::connect(guess6Button, SIGNAL(clicked()), this, SLOT(guess6ButtonClickedHandler()));
+    QObject::connect(guess7Button, SIGNAL(clicked()), this, SLOT(guess7ButtonClickedHandler()));
+    QObject::connect(guess8Button, SIGNAL(clicked()), this, SLOT(guess8ButtonClickedHandler()));
+    QObject::connect(guess9Button, SIGNAL(clicked()), this, SLOT(guess9ButtonClickedHandler()));
+    QObject::connect(guess10Button, SIGNAL(clicked()), this, SLOT(guess10ButtonClickedHandler()));
+    QObject::connect(guess11Button, SIGNAL(clicked()), this, SLOT(guess11ButtonClickedHandler()));
+    QObject::connect(guess12Button, SIGNAL(clicked()), this, SLOT(guess12ButtonClickedHandler()));
 }
 void CasinoGuessingGameMainWindow::printStringRep() {
     // String representation for QtStarter.
@@ -123,6 +132,46 @@ void CasinoGuessingGameMainWindow::guess3ButtonClickedHandler() {
 void CasinoGuessingGameMainWindow::guess4ButtonClickedHandler() {
     printf("Pushed Button 4\n");
     guessValue = 4;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess5ButtonClickedHandler() {
+    printf("Pushed Button 5\n");
+    guessValue = 5;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess6ButtonClickedHandler() {
+    printf("Pushed Button 6\n");
+    guessValue = 6;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess7ButtonClickedHandler() {
+    printf("Pushed Button 7\n");
+    guessValue = 7;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess8ButtonClickedHandler() {
+    printf("Pushed Button 8\n");
+    guessValue = 8;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess9ButtonClickedHandler() {
+    printf("Pushed Button 9\n");
+    guessValue = 9;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess10ButtonClickedHandler() {
+    printf("Pushed Button 10\n");
+    guessValue = 10;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess11ButtonClickedHandler() {
+    printf("Pushed Button 11\n");
+    guessValue = 11;
+    playTurn(guessValue);
+}
+void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() {
+    printf("Pushed Button 12\n");
+    guessValue = 12;
     playTurn(guessValue);
 }
 void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
