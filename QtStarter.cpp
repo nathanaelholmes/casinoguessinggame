@@ -16,7 +16,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 // Build a GUI  main window for two dice.
 
         playerName { "Fred" },  // Define default values
-        amount { 5000.00 },
+        amount { 1000.00 },
         bettingAmount {0},
         textOutput { "" },
         die1Amount{0},
@@ -190,7 +190,7 @@ void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() { //Player gues
 }
 void CasinoGuessingGameMainWindow::resetButtonClickedHandler() { //Resets the game
     printf("Game Reset()\n");
-    amount= 5000.00;
+    amount= 1000.00;
 
     updateUI();
 }
