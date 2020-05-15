@@ -125,7 +125,8 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 
 // Player asked for another roll of the dice.
 void CasinoGuessingGameMainWindow::currentBetUIValueChangedHandler() {
-    printf("Rolled the spin box\n");
+    printf("Counter for current bet is at: ");
+    bettingAmount = currentBetUI->value();
 }
 void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {
     printf("Pushed Button 2\n");
