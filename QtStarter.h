@@ -24,8 +24,6 @@ private:
     int die1Amount;
     int die2Amount;
     std::string textOutput;
-    std::string die1Output;
-    std::string die2Output;
     Die die1, die2;
     int guessValue;
 

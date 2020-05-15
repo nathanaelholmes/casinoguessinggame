@@ -162,33 +162,6 @@ Die.cpp.s:
 	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Die.cpp.s
 .PHONY : Die.cpp.s
 
-Gameplay_functions.obj: Gameplay_functions.cpp.obj
-
-.PHONY : Gameplay_functions.obj
-
-# target to build an object file
-Gameplay_functions.cpp.obj:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.obj
-.PHONY : Gameplay_functions.cpp.obj
-
-Gameplay_functions.i: Gameplay_functions.cpp.i
-
-.PHONY : Gameplay_functions.i
-
-# target to preprocess a source file
-Gameplay_functions.cpp.i:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.i
-.PHONY : Gameplay_functions.cpp.i
-
-Gameplay_functions.s: Gameplay_functions.cpp.s
-
-.PHONY : Gameplay_functions.s
-
-# target to generate assembly for a file
-Gameplay_functions.cpp.s:
-	$(MAKE) -f CMakeFiles\casinoguessinggame.dir\build.make CMakeFiles/casinoguessinggame.dir/Gameplay_functions.cpp.s
-.PHONY : Gameplay_functions.cpp.s
-
 QtStarter.obj: QtStarter.cpp.obj
 
 .PHONY : QtStarter.obj
@@ -310,9 +283,6 @@ help:
 	@echo ... Die.obj
 	@echo ... Die.i
 	@echo ... Die.s
-	@echo ... Gameplay_functions.obj
-	@echo ... Gameplay_functions.i
-	@echo ... Gameplay_functions.s
 	@echo ... QtStarter.obj
 	@echo ... QtStarter.i
 	@echo ... QtStarter.s

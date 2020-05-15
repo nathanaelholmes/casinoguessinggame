@@ -8,7 +8,6 @@
 #include <cstdlib> // Needed to use random numbers
 #include <ctime> //Needed to seed random numbers
 #include <iomanip> //Needed to display bank amount and bet correctly
-#include "Header.h"
 #include "Die.h"
 
 void displayResults(float currentBank, float currentBet);
@@ -20,8 +19,6 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
         amount { 5000.00 },
         bettingAmount {0},
         textOutput { "" },
-        die1Output{""},
-        die2Output{""},
         die1Amount{0},
         die2Amount{0},
         guessValue { 0 },
@@ -37,6 +34,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 
     srand(time(0)); // "Seed" the random generator with computer clock
 
+    //Connect all the buttons
     QObject::connect(resetButton, SIGNAL(clicked()), this, SLOT(resetButtonClickedHandler()));
     QObject::connect(currentBetUI, SIGNAL(valueChanged(int)), this, SLOT(currentBetUIValueChangedHandler()));
     QObject::connect(guess2Button, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
@@ -66,12 +64,12 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     //TODO: Convert error-handling into try-catch statements?
     if (bettingAmount < amount || bettingAmount == amount){ //Makes sure player has enough money in bank
         int rollValue = 0; //The actual number on the Dice
-        die1Amount= die1.roll();
-        die2Amount= die2.roll();
+        die1Amount= die1.roll();//Sets Value for Die 1
+        die2Amount= die2.roll();//Sets Value for Die 2
         rollValue = die1Amount+die2Amount; //The Dice are rolled, and summed into a roll amount
         //textOutputUI->setText(QString::fromStdString(textOutput));
-        die1OutputUI->setText(QString::fromStdString(std::to_string(die1Amount)));
-        die2OutputUI->setText(QString::fromStdString(std::to_string(die2Amount)));
+        die1OutputUI->setText(QString::fromStdString(std::to_string(die1Amount))); //Displays Die 1 Value
+        die2OutputUI->setText(QString::fromStdString(std::to_string(die2Amount))); //Displays Die 2 Value
 
         if(rollValue == guessedValue) { //Branch if the guess is the same as the dice
             double multiplier = 0;//A multiplier variable is initialized
@@ -130,75 +128,69 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 
 }
 
-// Player asked for another roll of the dice.
-void CasinoGuessingGameMainWindow::currentBetUIValueChangedHandler() {
+void CasinoGuessingGameMainWindow::currentBetUIValueChangedHandler() { //Player makes a bet
     printf("Counter for current bet is at: ");
     bettingAmount = currentBetUI->value();
     std::cout<<bettingAmount << "\n\n";
 }
-void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {//Player guesses 2
     printf("Pushed Button 2\n");
     guessValue = 2;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess3ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess3ButtonClickedHandler() {//Player guesses 3
     printf("Pushed Button 3\n");
     guessValue = 3;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess4ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess4ButtonClickedHandler() {//Player guesses 4
     printf("Pushed Button 4\n");
     guessValue = 4;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess5ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess5ButtonClickedHandler() {//Player guesses 5
     printf("Pushed Button 5\n");
     guessValue = 5;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess6ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess6ButtonClickedHandler() {//Player guesses 6
     printf("Pushed Button 6\n");
     guessValue = 6;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess7ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess7ButtonClickedHandler() {//Player guesses 7
     printf("Pushed Button 7\n");
     guessValue = 7;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess8ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess8ButtonClickedHandler() {//Player guesses 8
     printf("Pushed Button 8\n");
     guessValue = 8;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess9ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess9ButtonClickedHandler() {//Player guesses 9
     printf("Pushed Button 9\n");
     guessValue = 9;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess10ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess10ButtonClickedHandler() {//Player guesses 10
     printf("Pushed Button 10\n");
     guessValue = 10;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess11ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess11ButtonClickedHandler() {//Player guesses 11
     printf("Pushed Button 11\n");
     guessValue = 11;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() { //Player guesses 12
     printf("Pushed Button 12\n");
     guessValue = 12;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::resetButtonClickedHandler() {
+void CasinoGuessingGameMainWindow::resetButtonClickedHandler() { //Resets the game
     printf("Game Reset()\n");
     amount= 5000.00;
-
-//    // Get player's betting amount
-//    double bettingAmount = 0; //Double variable that holds a bet amount less than or equal to the bank amount
-//    bettingAmount = currentBetUI->value();
-    // Put message on the screen to ask for guess
 
     updateUI();
 }
