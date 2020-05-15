@@ -193,7 +193,7 @@ void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() {
 }
 void CasinoGuessingGameMainWindow::resetButtonClickedHandler() {
     printf("Game Reset()\n");
-    amount= 10000.00;
+    amount= 5000.00;
 
 //    // Get player's betting amount
 //    double bettingAmount = 0; //Double variable that holds a bet amount less than or equal to the bank amount
