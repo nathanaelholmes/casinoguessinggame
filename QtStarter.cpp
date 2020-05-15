@@ -17,9 +17,13 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 // Build a GUI  main window for two dice.
 
         playerName { "Fred" },  // Define default values
-        amount { 10000.00 },
+        amount { 50000.00 },
         bettingAmount {0},
         textOutput { "" },
+        die1Output{""},
+        die2Output{""},
+        die1Amount{0},
+        die2Amount{0},
         guessValue { 0 },
         die1 { 6, 1, 1, "red", false, "Plastic" },
         die2 { 6, 1, 1, "green", false, "Plastic" }
@@ -62,7 +66,12 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     //TODO: Convert error-handling into try-catch statements?
     if (bettingAmount < amount || bettingAmount == amount){ //Makes sure player has enough money in bank
         int rollValue = 0; //The actual number on the Dice
-        rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
+        die1Amount= die1.roll();
+        die2Amount= die2.roll();
+        rollValue = die1Amount+die2Amount; //The Dice are rolled, and summed into a roll amount
+        //textOutputUI->setText(QString::fromStdString(textOutput));
+        die1OutputUI->setText(QString::fromStdString(std::to_string(die1Amount)));
+        die2OutputUI->setText(QString::fromStdString(std::to_string(die2Amount)));
 
         if(rollValue == guessedValue) { //Branch if the guess is the same as the dice
             double multiplier = 0;//A multiplier variable is initialized
