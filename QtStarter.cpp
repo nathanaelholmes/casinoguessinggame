@@ -18,7 +18,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 
         playerName { "Fred" },  // Define default values
         amount { 10000.00 },
-        bettingAmount {5.00},
+        bettingAmount {0},
         textOutput { "" },
         guessValue { 0 },
         die1 { 6, 1, 1, "red", false, "Plastic" },

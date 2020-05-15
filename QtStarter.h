@@ -20,7 +20,7 @@ public:
 private:
     std::string playerName;
     double amount;
-    double bettingAmount;
+    int bettingAmount;
     std::string textOutput;
     Die die1, die2;
     int guessValue;
