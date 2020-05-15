@@ -33,7 +33,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 
     srand(time(0)); // "Seed" the random generator with computer clock
 
-    QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
+    QObject::connect(resetButton, SIGNAL(clicked()), this, SLOT(resetButtonClickedHandler()));
     QObject::connect(currentBetUI, SIGNAL(valueChanged(int)), this, SLOT(currentBetUIValueChangedHandler()));
     QObject::connect(guess2Button, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
     QObject::connect(guess3Button, SIGNAL(clicked()), this, SLOT(guess3ButtonClickedHandler()));
@@ -59,7 +59,6 @@ void CasinoGuessingGameMainWindow::updateUI() {
 
 void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     // Player guesses a number between 2 and 12
-    textOutputUI->setText("Guess a Number");
     //TODO: Convert error-handling into try-catch statements?
     int rollValue = 0; //The actual number on the Dice
     rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
@@ -112,6 +111,9 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     }
     else {
         amount = amount - (bettingAmount);
+        if (amount <0) {
+            amount =0;
+        }
         textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
         updateUI();
     }
@@ -191,12 +193,13 @@ void CasinoGuessingGameMainWindow::guess12ButtonClickedHandler() {
     guessValue = 12;
     playTurn(guessValue);
 }
-void CasinoGuessingGameMainWindow::pushButtonClickedHandler() {
-    printf("Inside pushButtonClickedHandler()\n");
+void CasinoGuessingGameMainWindow::resetButtonClickedHandler() {
+    printf("Game Reset()\n");
+    amount= 10000.00;
 
-    // Get player's betting amount
-    double bettingAmount = 0; //Double variable that holds a bet amount less than or equal to the bank amount
-    bettingAmount = currentBetUI->value();
+//    // Get player's betting amount
+//    double bettingAmount = 0; //Double variable that holds a bet amount less than or equal to the bank amount
+//    bettingAmount = currentBetUI->value();
     // Put message on the screen to ask for guess
 
     updateUI();

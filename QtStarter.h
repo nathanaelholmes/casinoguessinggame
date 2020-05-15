@@ -27,7 +27,7 @@ private:
 
 public Q_SLOTS:
     void playTurn(int guessedValue);
-    void pushButtonClickedHandler();
+    void resetButtonClickedHandler();
     void currentBetUIValueChangedHandler();
     void guess2ButtonClickedHandler();
     void guess3ButtonClickedHandler();
