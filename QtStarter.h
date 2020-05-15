@@ -20,6 +20,7 @@ public:
 private:
     std::string playerName;
     double amount;
+    double bettingAmount;
     std::string textOutput;
     Die die1, die2;
     int guessValue;
@@ -27,6 +28,7 @@ private:
 public Q_SLOTS:
     void playTurn(int guessedValue);
     void pushButtonClickedHandler();
+    void currentBetUIValueChangedHandler();
     void guess2ButtonClickedHandler();
     void guess3ButtonClickedHandler();
     void guess4ButtonClickedHandler();

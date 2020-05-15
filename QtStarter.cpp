@@ -18,6 +18,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
 
         playerName { "Fred" },  // Define default values
         amount { 10000.00 },
+        bettingAmount {5.00},
         textOutput { "" },
         guessValue { 0 },
         die1 { 6, 1, 1, "red", false, "Plastic" },
@@ -33,6 +34,7 @@ CasinoGuessingGameMainWindow :: CasinoGuessingGameMainWindow(QMainWindow *parent
     srand(time(0)); // "Seed" the random generator with computer clock
 
     QObject::connect(pushButton, SIGNAL(clicked()), this, SLOT(pushButtonClickedHandler()));
+    QObject::connect(currentBetUI, SIGNAL(valueChanged(int)), this, SLOT(currentBetUIValueChangedHandler()));
     QObject::connect(guess2Button, SIGNAL(clicked()), this, SLOT(guess2ButtonClickedHandler()));
     QObject::connect(guess3Button, SIGNAL(clicked()), this, SLOT(guess3ButtonClickedHandler()));
     QObject::connect(guess4Button, SIGNAL(clicked()), this, SLOT(guess4ButtonClickedHandler()));
@@ -104,6 +106,9 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
                 //TODO: Insert "throw" error statement into default if number is not 2-12?
         }
 
+        amount = amount + (bettingAmount * multiplier);
+        textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
+
 //        std::cout << "\n\nGood Luck!! You won $" << std::fixed << std::setprecision(2) << std::setfill('0') <<bettingAmount * multiplier; //Winning message
 //        amount = amount + bettingAmount * multiplier; //Bank amount updated
 //    } else {
@@ -119,6 +124,9 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 }
 
 // Player asked for another roll of the dice.
+void CasinoGuessingGameMainWindow::currentBetUIValueChangedHandler() {
+    printf("Rolled the spin box\n");
+}
 void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {
     printf("Pushed Button 2\n");
     guessValue = 2;
