@@ -60,76 +60,65 @@ void CasinoGuessingGameMainWindow::updateUI() {
 void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     // Player guesses a number between 2 and 12
     //TODO: Convert error-handling into try-catch statements?
-    int rollValue = 0; //The actual number on the Dice
-    rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
+    if (bettingAmount < amount || bettingAmount == amount){ //Makes sure player has enough money in bank
+        int rollValue = 0; //The actual number on the Dice
+        rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
 
-    if(rollValue == guessedValue) { //Branch if the guess is the same as the dice
-        double multiplier = 0;//A multiplier variable is initialized
-        switch (guessedValue) { //Assigns a multiplier based on how likely the number is to appear
-            case 7: //1 in 6 chance of rolling a 7
-                multiplier = 6;
-                break;
-            case 6: //5 in 36 chance of rolling a 6
-                multiplier = 7.2;
-                break;
-            case 8: //5 in 36 chance of rolling a 6
-                multiplier = 7.2;
-                break;
-            case 5: //1 in 9 chance of rolling a 5
-                multiplier = 9;
-                break;
-            case 9: //1 in 9 chance of rolling a 9
-                multiplier = 9;
-                break;
-            case 4: //1 in 12 chance of rolling a 4
-                multiplier = 12;
-                break;
-            case 10: //1 in 12 chance of rolling a 10
-                multiplier = 12;
-                break;
-            case 3: //1 in 18 chance of rolling a 3
-                multiplier = 18;
-                break;
-            case 11: //1 in 18 chance of rolling a 3
-                multiplier = 18;
-                break;
-            case 2: //1 in 36 chance of rolling a 2
-                multiplier = 36;
-                break;
-            case 12: //1 in 36 chance of rolling a 12
-                multiplier = 36;
-                break;
-            default:
-                std::cout <<"Error in program.";
-                break;
-                //TODO: Insert "throw" error statement into default if number is not 2-12?
+        if(rollValue == guessedValue) { //Branch if the guess is the same as the dice
+            double multiplier = 0;//A multiplier variable is initialized
+            switch (guessedValue) { //Assigns a multiplier based on how likely the number is to appear
+                case 7: //1 in 6 chance of rolling a 7
+                    multiplier = 6;
+                    break;
+                case 6: //5 in 36 chance of rolling a 6
+                    multiplier = 7.2;
+                    break;
+                case 8: //5 in 36 chance of rolling a 6
+                    multiplier = 7.2;
+                    break;
+                case 5: //1 in 9 chance of rolling a 5
+                    multiplier = 9;
+                    break;
+                case 9: //1 in 9 chance of rolling a 9
+                    multiplier = 9;
+                    break;
+                case 4: //1 in 12 chance of rolling a 4
+                    multiplier = 12;
+                    break;
+                case 10: //1 in 12 chance of rolling a 10
+                    multiplier = 12;
+                    break;
+                case 3: //1 in 18 chance of rolling a 3
+                    multiplier = 18;
+                    break;
+                case 11: //1 in 18 chance of rolling a 3
+                    multiplier = 18;
+                    break;
+                case 2: //1 in 36 chance of rolling a 2
+                    multiplier = 36;
+                    break;
+                case 12: //1 in 36 chance of rolling a 12
+                    multiplier = 36;
+                    break;
+                default:
+                    std::cout <<"Error in program.";
+                    break;
+                    //TODO: Insert "throw" error statement into default if number is not 2-12?
+            }
+            amount = amount + (bettingAmount * multiplier);
+            textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
+            updateUI();
         }
-
-        amount = amount + (bettingAmount * multiplier);
-        textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
-        updateUI();
-    }
-    else {
-        amount = amount - (bettingAmount);
-        if (amount <0) {
-            amount =0;
+        else {
+            amount = amount - (bettingAmount);
+            if (amount <0) {
+                amount =0;
+            }
+            textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
+            updateUI();
         }
-        textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
-        updateUI();
     }
 
-//        std::cout << "\n\nGood Luck!! You won $" << std::fixed << std::setprecision(2) << std::setfill('0') <<bettingAmount * multiplier; //Winning message
-//        amount = amount + bettingAmount * multiplier; //Bank amount updated
-//    } else {
-//        std::cout << "Bad Luck this time !! You lost $ "<< std::fixed << std::setprecision(2) << std::setfill('0') << bettingAmount <<"\n"; //Losing message
-//        amount = amount - bettingAmount; //Bank amount updated
-
-
-//    std::cout << "\nThe winning number was : " << rollValue << "\n"; //Displays amount of dice
-//    std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n"; //Displays new bank amount
-//    if(amount < .01) { //Sequence if player has no money left
-//        std::cout << "You have no money to play ";
-//    }
 }
 
 // Player asked for another roll of the dice.
