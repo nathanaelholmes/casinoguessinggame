@@ -59,7 +59,7 @@ void CasinoGuessingGameMainWindow::updateUI() {
 
 void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
     // Player guesses a number between 2 and 12
-
+    textOutputUI->setText("Guess a Number");
     //TODO: Convert error-handling into try-catch statements?
     int rollValue = 0; //The actual number on the Dice
     rollValue = die1.roll() + die2.roll(); //The Dice are rolled, and summed into a roll amount
@@ -108,13 +108,20 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 
         amount = amount + (bettingAmount * multiplier);
         textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
+        updateUI();
+    }
+    else {
+        amount = amount - (bettingAmount);
+        textOutputUI->setText(QString::fromStdString(std::to_string(amount)));
+        updateUI();
+    }
 
 //        std::cout << "\n\nGood Luck!! You won $" << std::fixed << std::setprecision(2) << std::setfill('0') <<bettingAmount * multiplier; //Winning message
 //        amount = amount + bettingAmount * multiplier; //Bank amount updated
 //    } else {
 //        std::cout << "Bad Luck this time !! You lost $ "<< std::fixed << std::setprecision(2) << std::setfill('0') << bettingAmount <<"\n"; //Losing message
 //        amount = amount - bettingAmount; //Bank amount updated
-    }
+
 
 //    std::cout << "\nThe winning number was : " << rollValue << "\n"; //Displays amount of dice
 //    std::cout << "\n"<<playerName<<", You have $ " << std::fixed << std::setprecision(2) << std::setfill('0') << amount << "\n"; //Displays new bank amount
@@ -127,6 +134,7 @@ void CasinoGuessingGameMainWindow::playTurn(int guessedValue) {
 void CasinoGuessingGameMainWindow::currentBetUIValueChangedHandler() {
     printf("Counter for current bet is at: ");
     bettingAmount = currentBetUI->value();
+    std::cout<<bettingAmount << "\n\n";
 }
 void CasinoGuessingGameMainWindow::guess2ButtonClickedHandler() {
     printf("Pushed Button 2\n");
